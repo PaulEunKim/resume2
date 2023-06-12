@@ -14,7 +14,6 @@ import EducationCard from "./EducationCard";
 import profile from "../images/profile-linkedin-avatar.jpg";
 import { TimelineDot } from "@mui/lab";
 
-import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import "@fontsource/saira-extra-condensed/600.css";
 import "@fontsource/mulish/700.css";
 
@@ -114,7 +113,7 @@ const ResponsiveDrawer = () => {
             color: "#c55911",
           }}
         >
-          Paul{" "}
+          Pau{" "}
           <Box component="span" sx={{ color: "#343a40" }}>
             Kim
           </Box>
