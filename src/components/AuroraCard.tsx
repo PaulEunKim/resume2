@@ -6,11 +6,9 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
 //card
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-
-import Button from "@mui/material/Button";
+import { Avatar } from "@mui/material";
+import aurora from "../images/aurora.jpg";
 
 //lists
 import List from "@mui/material/List";
@@ -19,9 +17,26 @@ import ListItem from "@mui/material/ListItem";
 const AuroraContents = (
   <React.Fragment>
     <CardContent>
-      <Typography sx={{ fontSize: 22 }} color="text.primary" gutterBottom>
+      <Typography
+          sx={{
+            fontFamily: "Saira Extra Condensed",
+            fontSize: 32,
+            color: "#343a40",
+          }}
+        >
         Software Development Intern
+        </Typography>
+
+        <Typography
+        sx={{
+          fontFamily: "Saira Extra Condensed",
+          fontSize: 24,
+          color: "#c55911",
+        }}
+      >
+        City of Aurora, Colorado
       </Typography>
+
 
       <Typography sx={{ mb: 1.5 }} color="text.secondary">
         Sep 2019 - Mar 2020
@@ -37,21 +52,24 @@ const AuroraContents = (
       </Typography>
     </CardContent>
 
-    <CardActions>
+    {/* <CardActions>
       <Button size="small">
         <LinkIcon></LinkIcon>
       </Button>
-    </CardActions>
+    </CardActions> */}
   </React.Fragment>
 );
 
 const AuroraCard = () => {
   return (
-    <React.Fragment>
-      <Box sx={{ minWidth: 275, maxWidth: 500 }}>
-        <Card variant="outlined" sx={{borderColor: '#c55911'}}>{AuroraContents}</Card>
-      </Box>
-    </React.Fragment>
+    <Box sx={{display:'flex', p:5, border: 'none'}}>
+    <Avatar
+        alt="Remy Sharp"
+        src={aurora}
+        sx={{ width: 156, height: 156, m:1, ml:-2}}
+      />
+    {AuroraContents} 
+    </Box>
   );
 };
 

@@ -6,26 +6,44 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
 //card
-import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 
+//other
 import Button from "@mui/material/Button";
+import { Avatar } from "@mui/material";
 
 //lists
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 
+//images
+import asu from "../images/asu.jpg";
+
 const ASUContents = (
   <React.Fragment>
     <CardContent>
-      <Typography sx={{ fontSize: 22 }} color="text.primary" gutterBottom>
+      <Typography
+        sx={{
+          fontFamily: "Saira Extra Condensed",
+          fontSize: 32,
+          color: "#343a40",
+        }}
+      >
         Mathematics Research Intern
       </Typography>
 
-      <Typography sx={{ mb: 1.5 }}>
-        May 2022 - Aug 2022
+      <Typography
+        sx={{
+          fontFamily: "Saira Extra Condensed",
+          fontSize: 24,
+          color: "#c55911",
+        }}
+      >
+        Arizona State University
       </Typography>
+
+      <Typography sx={{ mb: 1.5 }} color="text.secondary">May 2022 - Aug 2022</Typography>
 
       <Typography variant="body2">
         <List sx={{ listStyleType: "disc", pl: 4 }}>
@@ -39,23 +57,28 @@ const ASUContents = (
         </List>
       </Typography>
     </CardContent>
-
+{/* 
     <CardActions>
       <Button size="small">
         <LinkIcon></LinkIcon>
       </Button>
-    </CardActions>
+    </CardActions> */}
   </React.Fragment>
 );
 
 const ASUCard = () => {
   return (
     <React.Fragment>
-      <Box sx={{ minWidth: 275, maxWidth: 500 }}>
-        <Card variant="outlined" sx={{borderColor: '#c55911'}}>{ASUContents}</Card>
+      <Box sx={{ display: "flex", p: 5, border: "none" }}>
+        <Avatar
+          alt="Remy Sharp"
+          src={asu}
+          sx={{ width: 156, height: 156, m: 1, ml: -2 }}
+        />
+        {ASUContents}
       </Box>
     </React.Fragment>
   );
-}
+};
 
-export default ASUCard
+export default ASUCard;

@@ -8,9 +8,10 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
 //card
-import Card from "@mui/material/Card";
+import becks from "../images/becks.jpg";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
+import { Avatar } from "@mui/material";
 
 //button
 import Button from "@mui/material/Button";
@@ -22,11 +23,27 @@ import ListItem from "@mui/material/ListItem";
 const BecksContents = (
   <React.Fragment>
     <CardContent>
-      <Typography sx={{ fontSize: 22 }} color="text.primary" gutterBottom>
-      Machine Learning Engineer Intern
+      <Typography
+        sx={{
+          fontFamily: "Saira Extra Condensed",
+          fontSize: 32,
+          color: "#343a40",
+        }}
+      >
+        Machine Learning Engineer Intern
       </Typography>
 
-      <Typography sx={{ mb: 1.5 }} color="text.secondary">
+      <Typography
+        sx={{
+          fontFamily: "Saira Extra Condensed",
+          fontSize: 24,
+          color: "#c55911",
+        }}
+      >
+        Beck's Hybrids
+      </Typography>
+
+      <Typography sx={{ mb: 1.5}} color="text.secondary">
         Jan 2023 - May 2023
       </Typography>
 
@@ -52,22 +69,25 @@ const BecksContents = (
       </Typography>
     </CardContent>
 
-    <CardActions>
+    {/* <CardActions>
       <Button size="small">
         <LinkIcon></LinkIcon>
       </Button>
-    </CardActions>
+    </CardActions> */}
   </React.Fragment>
 );
 
 const BecksCard = () => {
   return (
-    <React.Fragment>
-      <Box sx={{ minWidth: 275, maxWidth: 500 }}>
-        <Card variant="outlined" sx={{borderColor: '#c55911'}}>{BecksContents}</Card>
-      </Box>
-    </React.Fragment>
+    <Box sx={{ display: "flex", p: 5, border: "none" }}>
+      <Avatar
+        alt="Remy Sharp"
+        src={becks}
+        sx={{ width: 156, height: 156, m: 1, ml: -2 }}
+      />
+      {BecksContents}
+    </Box>
   );
-}
+};
 
 export default BecksCard;

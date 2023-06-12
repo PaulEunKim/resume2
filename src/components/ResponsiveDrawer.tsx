@@ -1,31 +1,22 @@
 import * as React from "react";
-import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
-import IconButton from "@mui/material/IconButton";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import MailIcon from "@mui/icons-material/Mail";
-import MenuIcon from "@mui/icons-material/Menu";
-import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { Avatar } from "@mui/material";
-import asu from "../images/asu.png";
-import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
-import { styled } from "@mui/material/styles";
-import CustomizedTimeline from "../components/CustomizedTimeline";
+
+//components
+import BecksCard from "./BecksCard";
+import AuroraCard from "./AuroraCard";
+import ASUCard from "./ASUCard";
+import EducationCard from "./EducationCard";
 
 import profile from "../images/profile-linkedin-avatar.jpg";
 import { TimelineDot } from "@mui/lab";
 
-import "@fontsource/saira-extra-condensed/600.css"; // Specify weight
+import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
+import "@fontsource/saira-extra-condensed/600.css";
+import "@fontsource/mulish/700.css";
 
 const drawerWidth = 300;
 
@@ -33,7 +24,9 @@ const ResponsiveDrawer = () => {
   const drawer = (
     <Box>
       <Box sx={{ justifyContent: "center", display: "flex" }}>
-        <TimelineDot sx={{backgroundColor: '#c55911'}}>
+        <TimelineDot
+          sx={{ backgroundColor: "#f09f5d", border: 8, borderColor: "#f09f5d" }}
+        >
           <Avatar
             alt="Remy Sharp"
             src={profile}
@@ -42,16 +35,41 @@ const ResponsiveDrawer = () => {
         </TimelineDot>
       </Box>
 
-      <List>
-        {["Experience", "Education", "Spam"].map((text, index) => (
-          <ListItem sx={{ textAlign: "center" }} key={text} disablePadding>
-            <Typography>
+      <Typography
+        sx={{
+          fontFamily: "Mulish",
+          fontSize: 24,
+          color: "#f09f5d",
+          textAlign: "center",
+          padding: 1,
+        }}
+      >
+        About
+      </Typography>
 
-            </Typography>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
+      <Typography
+        sx={{
+          fontFamily: "Mulish",
+          fontSize: 24,
+          color: "#f09f5d",
+          textAlign: "center",
+          padding: 1,
+        }}
+      >
+        Experience
+      </Typography>
+
+      <Typography
+        sx={{
+          fontFamily: "Mulish",
+          fontSize: 24,
+          color: "#f09f5d",
+          textAlign: "center",
+          padding: 1,
+        }}
+      >
+        Education
+      </Typography>
     </Box>
   );
 
@@ -71,6 +89,7 @@ const ResponsiveDrawer = () => {
               boxSizing: "border-box",
               width: drawerWidth,
               justifyContent: "center",
+              backgroundColor: "#c55911",
             },
           }}
           open
@@ -88,8 +107,17 @@ const ResponsiveDrawer = () => {
           width: { sm: `calc(100% - ${drawerWidth}px)` },
         }}
       >
-        <Typography sx={{fontFamily: 'Saira Extra Condensed', fontSize: 135, color: '#c55911'}}>
-          Paul <Box component="span" sx={{color: '#343a40'}}>Kim</Box>
+        <Typography
+          sx={{
+            fontFamily: "Saira Extra Condensed",
+            fontSize: 135,
+            color: "#c55911",
+          }}
+        >
+          Paul{" "}
+          <Box component="span" sx={{ color: "#343a40" }}>
+            Kim
+          </Box>
         </Typography>
         <Typography paragraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -106,7 +134,6 @@ const ResponsiveDrawer = () => {
           lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa sapien
           faucibus et molestie ac.
         </Typography>
-        <Divider />
         <Typography paragraph>
           Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
           ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar
@@ -121,8 +148,36 @@ const ResponsiveDrawer = () => {
           eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
           posuere sollicitudin aliquam ultrices sagittis orci a.
         </Typography>
-        <Divider />
-        <CustomizedTimeline></CustomizedTimeline>
+
+        <Divider sx={{ my: 7 }} />
+
+        <Typography
+          sx={{
+            fontFamily: "Saira Extra Condensed",
+            fontSize: 64,
+            color: "#343a40",
+          }}
+        >
+          EXPERIENCE
+        </Typography>
+
+        <BecksCard></BecksCard>
+        <ASUCard></ASUCard>
+        <AuroraCard></AuroraCard>
+
+        <Divider sx={{ my: 7 }} />
+
+        <Typography
+          sx={{
+            fontFamily: "Saira Extra Condensed",
+            fontSize: 64,
+            color: "#343a40",
+          }}
+        >
+          EDUCATION
+        </Typography>
+
+        <EducationCard></EducationCard>
       </Box>
     </Box>
   );
