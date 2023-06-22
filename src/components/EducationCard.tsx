@@ -20,7 +20,8 @@ import IconButton from "@mui/material/IconButton";
 import Fingerprint from "@mui/icons-material/Fingerprint";
 
 //pages
-import pdf from '../pages/challenger.pdf';
+import challenger from '../pages/challenger.pdf';
+import capstone from '../pages/capstone.pdf';
 
 const EducationContents = (
   <React.Fragment>
@@ -82,7 +83,7 @@ const EducationContents = (
             Evoked deep thought on the importance of responsible engineering and
             management practices such as the{" "}
             <strong>challenger disaster </strong>
-            <IconButton color="primary" href={pdf}>
+            <IconButton color="primary" href={challenger}>
               <PictureAsPdfIcon sx={{ color: "#c55911" }} />
             </IconButton>
           </ListItem>

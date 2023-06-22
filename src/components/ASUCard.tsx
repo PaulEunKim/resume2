@@ -50,7 +50,7 @@ const ASUContents = (
           <ListItem sx={{ display: "list-item" }}>
             Integrated a variety of <strong>linear algebra</strong>,
             <strong> numerical analysis</strong>, and
-            <strong>calculus</strong> techniques to de-blur blurry/noisy images
+            <strong> calculus</strong> techniques to de-blur blurry/noisy images
             using <strong>MatLab</strong> and presented findings to ASU
             professors and students
           </ListItem>
