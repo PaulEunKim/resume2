@@ -10,9 +10,12 @@ import BecksCard from "./BecksCard";
 import AuroraCard from "./AuroraCard";
 import ASUCard from "./ASUCard";
 import EducationCard from "./EducationCard";
+import ProjectBecks from "./ProjectBecks";
 
 import profile from "../images/profile-linkedin-avatar.jpg";
 import { TimelineDot } from "@mui/lab";
+import ProjectCapstone from "./ProjectCapstone";
+import ProjectGenAI from "./ProjectGenAI";
 
 // import '../../global.css'
 // import "@fontsource/saira-extra-condensed/600.css";
@@ -153,6 +156,25 @@ const ResponsiveDrawer = () => {
         </Typography>
 
         <EducationCard></EducationCard>
+
+        <Divider sx={{ my: 7 }} />
+
+        {/* <ProjectBecks></ProjectBecks> */}
+        <Typography
+          sx={{
+            fontFamily: "Saira Extra Condensed",
+            fontSize: 64,
+            color: "#343a40",
+          }}
+        >
+          PROJECTS
+        </Typography>
+
+        <Box sx={{ display: "flex", justifyContent: "space-around" }}>
+          <ProjectBecks></ProjectBecks>
+          <ProjectCapstone></ProjectCapstone>
+          <ProjectGenAI></ProjectGenAI>
+        </Box>
       </Box>
     </Box>
   );
